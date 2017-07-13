@@ -52,6 +52,11 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'alamat'=>'required|string',
+            'tanggal_lahir'=>'required|date',
+            'no_ktp'=>'required|numeric',
+            'no_hp'=>'required|numeric',
+            
             
         ]);
     }

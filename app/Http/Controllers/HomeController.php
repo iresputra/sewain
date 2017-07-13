@@ -34,7 +34,9 @@ class HomeController extends Controller
         $barangunconfirmed = Barang::where(['konfirmasi_admin'=>0])->count();
         
         if(Auth::check()){
+            
         $jumnotifikasi = Notifikasi::where(['status'=> 1,'user_id'=>Auth::user()->id])->count();
+            
         return view('home',['barangfix'=>$barangfix,'barangs'=>$barangs,'barangconfirmed'=>$barangconfirmed,'barangunconfirmed'=>$barangunconfirmed,'jumnotifikasi'=>$jumnotifikasi]);
             
         }

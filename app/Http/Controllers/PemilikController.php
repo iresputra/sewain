@@ -97,11 +97,18 @@ class PemilikController extends UserController
     
   
     
-    public function konfirmasiPengembalian($transaksi_id){
-        $transaksi = Statustransaksi::findOrfail($transaksi_id);
-        $transaksi -> status_pengembalian = 1;
+    public function hapusBarang($id_barang){
+        $barang = Barang::findOrfail($id_barang);
         
-            return redirect()->back->with('status','Barang sudah kamu terima kembali');
-    }
+        if(Auth::user()->id == $barang->user_id){
+            $barang->delete();
+            return redirect()->back()->with('status','Barang berhasil kamu hapus');
+            }
+        
+        else{
+            return redirect()->back();
+        }
+}
+        
   
 }

@@ -59,6 +59,7 @@ class PenyewaController extends Controller
             
         $status = new Statustransaksi;
         $status->transaksi_id = $transaksi->id_transaksi;
+        $status->barang_id = $request->id_barang;
         $status->save();
        
 
@@ -67,20 +68,7 @@ class PenyewaController extends Controller
         $notifikasi->pemilik_id = $request->pemilik_id;
         $notifikasi->transaksi_id = $transaksi->id_transaksi;
         $notifikasi->save();
-            
-        
-        
-            
-      /*  $notifpemilik = new Notifpemilik;
-        $notifikasi->user_id = Auth::user()->id;
-        $notifikasi->pemilik_id = $request->pemilik_id;
-        $notifikasi->transaksi_id = $transaksi->id_transaksi;
-        $notifikasi->save();
-            */
-        
-        
-        
-       /* Session::flash('flash_message','Office successfully added.');*/
+
         return redirect()->back()->with('status','Transaksi berhasil');
         }
          else{

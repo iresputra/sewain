@@ -874,7 +874,8 @@ display:block;
 .details-left-info {
 float: left;
 margin-left: 5%;
-width:58%;
+width:100%;
+margin-top:4%;
 }
 .details-left-info  h3 {
 color: #000;
@@ -937,6 +938,11 @@ a.length{
 .btn_form{
 margin-top:2em;
 }
+
+.rapih{
+    margin-top:-0.5cm;
+    margin-bottom: 0.5cm;
+}
 .btn_form a {
 	border: none;
 	outline: none;
@@ -978,7 +984,7 @@ font-size:0.9em;
 line-height:1.8em;
 color: #808080;
 margin-top: 0.5cm;
-    margin-bottom: 2cm;
+    margin-bottom:0.3cm;
 }
 .details-left-info h5{
 margin:1em 0;
@@ -1283,8 +1289,8 @@ h4.last-price{
 	padding-top:10px;
 }
 .cart-total {
-  padding-top: 26px;
-  border-left: 1px solid;
+  padding-top: 0px;
+  border-left: 1px;
 }
 a.order {
   background:#333;

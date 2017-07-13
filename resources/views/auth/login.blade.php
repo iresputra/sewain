@@ -6,11 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-<!--  jQuery -->
-<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
 <!-- Bootstrap Date-Picker Plugin -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
@@ -266,7 +262,7 @@
                                     
                         <div class="form-group{{ $errors->has('no_ktp') ? ' has-error' : '' }}">
                             <label for="no_ktp">Nomor KTP </label>
-                                        <input id="no_ktp" type="text" minlength="16" maxlength="16" class="form-control" name="no_ktp" value="{{ old('no_ktp') }}" required>
+                                        <input id="no_ktp" type="text" class="form-control" name="no_ktp" value="{{ old('no_ktp') }}" required>
 
                                 @if ($errors->has('no_ktp'))
                                     <span class="help-block">
@@ -280,7 +276,7 @@
                             <label for="no_hp">Nomor Handphone</label>
 
                            
-                                <input name="no_hp" id="no_hp" type="text" minlength="12" maxlength="13" class="form-control"  value="{{ old('no_hp') }}" required>
+                                <input name="no_hp" id="no_hp" type="text" class="form-control"  value="{{ old('no_hp') }}" required>
 
                                 @if ($errors->has('no_hp'))
                                     <span class="help-block">
@@ -329,17 +325,7 @@
                             </div>
                         </div>
                                     
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
+  
                                     
                         
 									<div class="form-group">
@@ -350,6 +336,7 @@
 										</div>
 									</div>
 								</form>
+                                
 							</div>
 						</div>
 					</div>

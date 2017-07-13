@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</label>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
-						  <li class="dropdown1"><a href="#">PROSEDUR PENYEWAAN</a>
+						  <li class="dropdown1"><a href="{{route('show_prosedur')}}">PROSEDUR PENYEWAAN</a>
 							  <ul class="dropdown2">
 																					
 							  </ul>

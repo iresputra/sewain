@@ -18,6 +18,8 @@
 <body>
 
 <div class="container">
+    <span><a href="{{route('show_all_transaction')}}">Semua transaksi</a></span><br>
+    <span><a href="{{route('show_all_user')}}">Semua user</a></span>
   <h2>Semua Barang</h2>
   <p>Seluruh barang yang dimiliki user</p> 
     @if(session('status'))

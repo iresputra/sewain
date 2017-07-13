@@ -38,6 +38,12 @@ Route::get('/katalog-barang',[
     'as'=>'katalog_barang'
 ]);
 
+Route::get('prosedur-penyewaan',[
+   'uses'=>'BarangController@showProsedur',
+    'as'=>'show_prosedur'
+    
+]);
+
 
 //user
 Route::group(['middleware' => 'user'], function () {
@@ -56,6 +62,11 @@ Route::get('/edit-profile/{id}',[
 Route::get('/tambah-barang',[
     'uses'=>'BarangController@tambah',
     'as'=>'tambah_barang'
+]);
+
+Route::get('/edit-barang/{id_barang}',[
+    'uses'=>'BarangController@editBarang',
+    'as'=>'edit_barang'
 ]);
 
 
@@ -144,6 +155,11 @@ Route::get('tolak-transaksi/{transaksi_id}',[
         'uses'=>'PenyewaController@detailTransaksi',
         'as'=>'detail_transaksi'
     ]);
+    Route::get('/hapus-barang/{id_barang}',[
+    'uses' => 'PemilikController@hapusBarang',
+    'as'=>'hapus_barang'
+]);
+
     
 });
 

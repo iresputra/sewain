@@ -76,7 +76,7 @@
           @else
            <td>Permohonan sudah kamu tolak!</td>
           @endif
-        <td><a data-toggle="modal" data-target="#gambar"><img id="myImg" class="img-responsive" src="{{ asset('image/ktp/' . $transaksi->foto_ktp_penyewa) }}" /></a></td>
+        <td><a data-toggle="modal" data-target="#gambar"><img id="myImg" class="img-responsive" src="{{ asset('image/ktp/' . $transaksi->foto_ktp_penyewa) }}" /></a><span>keterangan  no ktp : {{$transaksi->user->no_ktp}} </span></td>
           
           
       </tr>
@@ -99,6 +99,7 @@
     <div class="modal-dialog modal-lg">
       <!-- Modal content-->
       <div class="modal-content" id="img01">
+        
         
         
        

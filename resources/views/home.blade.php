@@ -115,10 +115,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  @foreach($barangs as $barang)
     @if($barang->konfirmasi_admin==1)
 				 <li>
-                     <a href="{{route('show.barang',['id_barang'=>$barang->id_barang])}}"><img src="{{ asset('image/' . $barang->foto_barang) }}" width="300" height="300"/></a>
+                     <a href="{{route('show.barang',['id_barang'=>$barang->id_barang])}}"><img src="{{ asset('image/' . $barang->foto_barang) }}" width="300" height="300" style=" border: 1px solid #ccc; background:#fcfdff; box-shadow:0px 2px 3px 0px rgba(0,0,0,0.2); margin-bottom:20px;border-radius:4px;"/></a>
 					 <div>
-						 <div class="model">
-							 <h4><a href="{{route('show.barang',['id_barang'=>$barang->id_barang])}}">{{$barang->nama_barang}}</a><span>Rp.{{$barang->harga_barang}}</span></h4>							 
+						 <div class="model" style="float: none;  margin: 0 auto;">
+							 <h4 align="center"><a href="{{route('show.barang',['id_barang'=>$barang->id_barang])}}">{{$barang->nama_barang}}</a><span>Rp.{{$barang->harga_barang}}</span></h4>							 
 						 </div>
 						 				 
 						 <div class="clearfix"></div>

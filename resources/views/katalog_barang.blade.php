@@ -13,7 +13,7 @@
 		      <div class="bike-parts">
 				 <div class="top">
 					 <ul>
-						 <li><a href="{{route('index')}}">home</a></li>
+						 <li><a href="{{route('index')}}">HOME </a>::  KATALOG BARANG</li>
 						 
 					 </ul>				 
 				 </div>
@@ -33,7 +33,7 @@
                          
                          </a>
                          @endforeach
-						 <div class="clearfix"><center>{{$barangs->links()}}</center></div>
+						 
                          
 					 </div>
 					 
@@ -44,13 +44,13 @@
 					
 					
 				 </div>
-                  
+                 
 			 </div>
-            
+             
          </div>
          
     </div>
-    
+    <div class="clearfix"><center>{{$barangs->links()}}</center></div>
          </div>
     
 @endsection       

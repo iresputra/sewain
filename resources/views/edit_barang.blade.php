@@ -146,7 +146,7 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="center">
-								<a href="#" id="register-form-link"><h3>Tambah Barang</h3> </a>
+								<a href="#" id="register-form-link"><h3>Edit Barang</h3> </a>
 							</div>
 						</div>
 						<hr>

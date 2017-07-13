@@ -20,6 +20,8 @@
 <body>
 
 <div class="container">
+    <span><a href="{{route('show_all_transaction')}}">Semua transaksi</a></span><br>
+      <span><a href-"{{route('dashboard_admin')}}">Semua barang</a></span><br>
   <h2>Semua User</h2>
   <p>Seluruh user</p>            
   <table class="table table-hover">
@@ -28,7 +30,7 @@
         <th>Nama</th>
         <th>Email</th>
         <th>Alamat</th>
-        <th>Tgl Lahir/th>
+        <th>Tgl Lahir</th>
         <th>No.KTP</th>
         <th>No.HP</th>
       </tr>

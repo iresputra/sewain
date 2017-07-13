@@ -17,6 +17,9 @@
 <body>
 
 <div class="container">
+    
+    <span><a href="{{route('dashboard_admin')}}">Semua barang</a></span><br>
+    <span><a href="{{route('show_all_user')}}">Semua user</a></span>
     <h2>List Transaksi </h2>
   <p></p>
   <table class="table table-hover">

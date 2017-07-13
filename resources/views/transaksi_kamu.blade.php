@@ -12,7 +12,7 @@
 	 <div class="container">
 		 
 		 <div class="col-md-9 cart-items">
-			 <h2>Transaksi Penyewaan </h2>
+             <h1>Transaksi Penyewaan </h1>
              @if($transaksis != NULL)
                 @foreach($transaksis as $transaksi)
                 @if($transaksi->barang->konfirmasi_admin == 1)  
@@ -20,21 +20,23 @@
              
              
              
-			 <div class="cart-header">
+			 <div class="cart-header" style="margin-top: 20px;">
                  
 				 <div> {{$transaksi->tanggal_transaksi}}</div>
-				 <div class="cart-sec1">
+				 <div class="cart-sec1" style=" border: 1px solid #ccc; background:#fcfdff; box-shadow:0px 2px 3px 0px rgba(0,0,0,0.2); margin-top: 20px;margin-bottom: 50px;border-radius:4px;" >
 						<div class="cart-item cyc">
 							
                             <img src="{{ asset('image/' . $transaksi->barang->foto_barang) }}" />
 						</div>
 					   <div class="cart-item-info">
 							 <h3><a href="{{route('show.barang',['id_barang'=>$transaksi->barang_id])}}">{{$transaksi->barang->nama_barang}}</a><span>Pemilik :: <a href="{{route('show_user',['id'=>$transaksi->pemilik->id])}}"> {{$transaksi->pemilik->name}}</a><br>No Hp   :: {{$transaksi->pemilik->no_hp}} </span></h3>
-							 <h4>Total : <span>Rp. </span>{{$transaksi->biaya_sewa}}</h4><br>
+							 <br>
 							 Jumlah yang disewa:: {{$transaksi->kuantitas_sewa}}<br>
                            Biaya harian : {{$transaksi->barang->harga_barang}}<br>
                             Tanggal peminjaman : {{$transaksi->tanggal_peminjaman}}<br>
                            Tanggal pengembalian : {{$transaksi->tanggal_pengembalian}}<br>
+                           
+                           <h4 align ="right" >Total : <span>Rp. </span>{{$transaksi->biaya_sewa}}</h4>
                            
 							 
 					   </div>
@@ -44,20 +46,28 @@
                     @if($transaksi->status->status_penolakan == 0)     
                         @if($transaksi->status->status_konfirmasi == 1)
 				            @if($transaksi->status->status_peminjaman == 0)
-                            <span><font color="black">Permohonan sudah disetujui pemilik</font></span>
-                         <span><div class="btn_form"><a onclick="javascript:demoFromHTML();">Unduh Transaksi</a>
-                            <a href="{{route('konfirmasi_penerimaan',['transaksi_id'=>$transaksi->id_transaksi])}}">Konfirmasi Penerimaan</a>
+                         <br>
+                            <span><font color="black">Permohonan sudah disetujui pemilik</font>
+                         <div class="btn_form" align="right"><a href="{{route('detail_transaksi',['id_transaksi'=>$transaksi->id_transaksi])}}">Details</a>
+                            
                              </div>   </span>
                          
                             @elseif($transaksi->status->status_peminjaman == 1 )
-                         <span><font color="black">Barang sudah kamu pinjam</font></span>
+                         <br>
+                         <span><font color="black">Barang sudah kamu pinjam</font>
+                              <div class="btn_form" align="right"><a href="{{route('detail_transaksi',['id_transaksi'=>$transaksi->id_transaksi])}}">Details</a>
+                         </div>
+                        </span>
+                         
                             @endif
                          @elseif($transaksi->status->konfirmasi ==0)
+                         <br>
                          <span><font color="black">Permohonan belum disetujui pemilik</font></span>
                          @endif
                     @else
+                         <br>
                         <span><font color="red">Permohonan ditolak pemilik</font></span>
-                         <span><div class="btn_form"><a href="{{route('detail_transaksi',['id_transaksi'=>$transaksi->id_transaksi])}}"> Detail</a></div></span>
+                     
                     @endif
 				        <div class="clearfix"></div>
 				    </div>		
@@ -69,35 +79,20 @@
                 <h1>Kamu belum memiliki transaksi apapun</h1>
              @endif
               </div>
-            
-             
-              <div class="col-md-3 cart-total">
-			 <div class="price-details">
-				 <h3>Barang yang ingin dipinjam</h3>
-				 <span>Confirmed</span>
-				 <span class="total">-----</span>
-				 <span>Unconfirmed</span>
-				 <span class="total">-----</span>
-				 <div class="clearfix"></div>				 
-			 </div>	
-			 <h4 class="last-price">TOTAL</h4>
-			 <span class="total final">{{$transaksis->count()}}</span>
-			 <div class="clearfix"></div>
-			 
-			 
-         </div>
+        
                 
     </div>
-		 </div>
+		
 
 
-<div id="transaksi">
-    TES
+
+
+    
 </div>
 <script type="text/javascript">
 
 function demoFromHTML() {
-    var pdf = new jsPDF('p', 'pt', 'letter');
+    var pdf = new jsPDF('l', 'pt', 'A5');
     // source can be HTML-formatted string, or a reference
     // to an actual DOM element from which the text will be scraped.
     source = $('#transaksi')[0];
@@ -114,7 +109,7 @@ function demoFromHTML() {
         }
     };
     margins = {
-        top: 80,
+        top: 5,
         bottom: 60,
         left: 40,
         width: 522
